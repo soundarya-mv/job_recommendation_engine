@@ -14,14 +14,14 @@ RSpec.describe JobRecommendationService do
     expect(job_recommendations).to eq(expected_job_recommendations)
   end
 
-  it "sorts jobs based on percentage of skills match" do
-    job_recommendations = JobRecommendationService.execute(["./data/test/jobseeker.csv", "./data/test/jobs.csv"])
-    expect(job_recommendations[0][0][:matching_skills_percentage]).to be > (job_recommendations[0][1][:matching_skills_percentage])
-  end
-
   it "returns job recommendations sorted by jobseeker ID" do
     job_recommendations = JobRecommendationService.execute(["./data/test/jobseekers.csv", "./data/test/jobs.csv"])
     expect(job_recommendations[0][0][:job_seeker_id]).to be < (job_recommendations[1][0][:job_seeker_id])
+  end
+
+  it "sorts jobs based on percentage of skills match" do
+    job_recommendations = JobRecommendationService.execute(["./data/test/jobseeker.csv", "./data/test/jobs.csv"])
+    expect(job_recommendations[0][0][:matching_skills_percentage]).to be > (job_recommendations[0][1][:matching_skills_percentage])
   end
 
   it "sorts jobs based on job_id when 2 roles have same matching_skills_percentage" do

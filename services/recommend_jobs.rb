@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class RecommendJobs
   BATCH_SIZE = 10
   attr_accessor :jobs

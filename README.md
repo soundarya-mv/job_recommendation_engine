@@ -13,7 +13,7 @@ Use make test to run all tests.
 Use make lint to check code for style issues.
 
 	make lint
-	bundle exec standardrb lib spec
+	bundle exec standardrb -a lib models services spec
 
 
 How business logics are separated from main file:

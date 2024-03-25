@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative "../services/recommend_jobs"
 require_relative "../services/parse_job_seekers_csv"
 require_relative "../services/parse_jobs_csv"
