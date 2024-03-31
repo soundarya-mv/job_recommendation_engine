@@ -7,8 +7,9 @@ RSpec.describe JobRecommendationService do
         {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 1, job_title: "Ruby Developer", matching_skill_count: 3, matching_skills_percentage: 100.0},
         {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 3, job_title: "Backend Developer", matching_skill_count: 2, matching_skills_percentage: 50.0},
         {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 9, job_title: "Python Developer", matching_skill_count: 2, matching_skills_percentage: 50.0},
+        {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 4, job_title: "Fullstack Developer", matching_skill_count: 2, matching_skills_percentage: 33.33333333333333},
         {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 7, job_title: "Data Analyst", matching_skill_count: 1, matching_skills_percentage: 25.0},
-        {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 4, job_title: "Fullstack Developer", matching_skill_count: 1, matching_skills_percentage: 16.666666666666664}
+        {job_seeker_id: 1, jobseeker_name: "Alice Seeker", job_id: 8, job_title: "Web Developer", matching_skill_count: 1, matching_skills_percentage: 25.0}
       ]]
     job_recommendations = JobRecommendationService.execute(["./data/test/jobseeker.csv", "./data/test/jobs.csv"])
     expect(job_recommendations).to eq(expected_job_recommendations)
